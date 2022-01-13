@@ -1,0 +1,11 @@
+.icon_img {
+    width: 85%;
+    height: 85%;
+    margin: auto;
+}
+
+.icon_container {
+    width: 70px;
+    height: 70px;
+    display: flex;
+}
