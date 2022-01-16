@@ -18,15 +18,19 @@
     max-height: 140px;
     height: 13vw;
     display: flex;
+    transition: background-color 1.5s;
+    border-radius: 50%;
+}
+
+.icon_container.selected, .icon_container:hover {
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 .icon_container.dark {
-    border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.050);
-    transition: background-color 1.5s;
 }
 
-.icon_container.dark:hover {
+.icon_container.dark:hover, .icon_container.dark.selected {
     background-color: rgba(255, 255, 255, 0.95);
 }
 
