@@ -72,7 +72,7 @@
     outline: rgba(255, 255, 255, 0.055) solid 1px;
 }
 
-.card_butt:hover, .card_butt.dark:active{
+.card_butt.dark:hover, .card_butt.dark:active{
     background-color: rgb(3, 160, 98, 0.5);
     color: rgb(255, 255, 255);
     outline: rgba(255, 255, 255, 0.25) solid 1px;
