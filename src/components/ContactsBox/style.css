@@ -22,7 +22,7 @@
     height: auto;
     font-size: 3vw;
     background-color: rgb(99, 99, 99);
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.85);
     outline: rgba(180, 180, 180, 0.055) solid 1px;
     border-radius: 5px;
     transition: background-color 0.5s, color 0.5s, outline 0.5s;
