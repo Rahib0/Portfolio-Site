@@ -1,10 +1,9 @@
 import React, { useEffect, useRef } from 'react'
-import { useTheme, useThemeUpdate } from '../../ThemeContext'
+import { useThemeUpdate } from '../../ThemeContext'
 import './style.css'
 
 export default function WelcomeCard() {
     const toggleTheme = useThemeUpdate()
-    const darkTheme = useTheme()
     const darkButton = useRef()
 
     useEffect(() => {
