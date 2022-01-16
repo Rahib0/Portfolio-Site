@@ -1,5 +1,6 @@
 export { default as WelcomeCard } from './WelcomeCard'
 export { default as ContactsBox } from './ContactsBox'
-export { default as FeaturedRepos } from './FeaturedRepos'
+export { default as FeaturedReposList } from './FeaturedReposList'
+export { default as FeaturedRepoCard } from './FeaturedRepoCard'
 export { default as IconList } from './IconList'
 export { default as Icon } from './Icon'

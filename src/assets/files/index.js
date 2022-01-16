@@ -1,0 +1,1 @@
+export { default as pdf } from './Rahib_Rahman.pdf'

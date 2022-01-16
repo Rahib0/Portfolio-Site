@@ -1,0 +1,114 @@
+/* i {
+    font-size: 80px;
+    color:rgba(0, 0, 0, 0.507);
+} */
+
+#relg {
+    padding-bottom: 28vh;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 8vh 1fr;
+    row-gap: 5vh;
+}
+
+.resume {
+    padding:5px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20vw;
+    height: auto;
+    font-size: 3vw;
+    background-color: rgb(99, 99, 99);
+    color: rgba(255, 255, 255, 0.5);
+    outline: rgba(180, 180, 180, 0.055) solid 1px;
+    border-radius: 5px;
+    transition: background-color 0.5s, color 0.5s, outline 0.5s;
+}
+
+.resume.dark {
+    background-color: rgb(3, 160, 98, 0.9);
+    color: rgba(255, 255, 255, 0.9);
+    outline: rgba(255, 255, 255, 0.055) solid 1px;
+}
+
+.resume.dark:hover, .resume.dark:active{
+    background-color: rgb(3, 160, 98, 0.5);
+    color: rgb(255, 255, 255);
+    outline: rgba(255, 255, 255, 0.25) solid 1px;
+}
+
+.resume:hover, .resume:active{
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(99, 99, 99, 0.8);
+    /* box-shadow: 2px 2px rgba(0, 0, 0, 0.300); */
+    cursor: pointer;
+}
+
+
+
+.links_container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.fab, .fas {
+    margin: 0px 2vw;
+    width: auto;
+    height: auto;
+    font-size: 7vw;
+    color: rgb(99, 99, 99);
+    transition: color 0.5s;
+}
+
+.fab.dark, .fas.dark {
+    color: rgb(3, 160, 98, 0.9);
+}
+
+.fab:hover, .fas:hover, .fab:active, .fas:active {
+    color: rgba(99, 99, 99, 0.5);
+    cursor: pointer;
+}
+
+.fab.dark:hover, .fas.dark:hover, .fab.dark:active, .fas.dark:active {
+    color: rgb(3, 160, 98, 0.5)
+}
+
+#elg {
+    padding-bottom: 5vh;
+}
+
+@media screen and (max-width: 768px) {
+    #relg {
+        padding-bottom: 35vh;
+    }
+    
+    .resume {
+        width: 28vw;
+        font-size: 4.5vw;
+    }
+
+    .fab, .fas {
+        font-size: 10vw;
+        margin: 0px 3vw;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #relg {
+        padding-bottom: 45vh;
+    }
+    
+    .resume {
+        width: 40vw;
+        font-size: 8vw;
+    }
+
+    .fab, .fas {
+        font-size: 15vw;
+        margin: 0px 3.5vw;
+    }
+}

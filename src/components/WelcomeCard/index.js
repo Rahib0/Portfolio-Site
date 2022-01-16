@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { useTheme, useThemeUpdate } from '../../ThemeContext'
+import './style.css'
 
 export default function WelcomeCard() {
-    
+    const toggleTheme = useThemeUpdate()
+    const darkTheme = useTheme()
+    const darkButton = useRef()
+
+    useEffect(() => {
+        setInterval( () => {darkButton.current.classList.toggle("glow")}, 2500 )
+    }, [])
+
     return (
-        <div id='welcome-card'>
-            <h1 id='name'>Rahib Rahman</h1>
-            <p id='desc'>Full stack developer and Economics Graduate</p>
+        <div className={`welcome_card`}>
+            <h1 className={`name`}>Rahib Rahman<span className='blink_me'>.</span></h1>
+            <p className={`desc`}>Full stack developer and Economics Graduate</p>
+            <p className={`second_line`}><span ref={darkButton} className={`darkmode_butt`} onClick={toggleTheme}>[ Dark Mode ]</span> appreciator</p>
         </div>
     )
 }

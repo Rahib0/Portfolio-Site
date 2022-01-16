@@ -1,0 +1,123 @@
+
+.featured_card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 10vh;
+}
+
+.featured_card_name {
+    padding-bottom: 2vh;
+    font-size: 3.5vw;
+}
+
+
+.screenshot{
+    margin: auto;
+    width: 60vw;
+    height: auto;
+    max-width: 100%;
+    /* padding-bottom: 2vh; */
+    margin-bottom: 2vh;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.desc {
+    margin: auto;
+    width: 80%;
+    font-size: 2vw;
+    padding-bottom: 3vh;
+    font-weight: 600;
+}
+
+.desc.dark {
+    color: rgb(3, 160, 98); 
+}
+
+.card_butt_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 3vh;
+}
+
+.card_butt {
+    padding: 1vh 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 18vw;
+    height: auto;
+    font-size: 3vw;
+    background-color: rgb(99, 99, 99);
+    color: rgba(255, 255, 255, 0.5);
+    outline: rgba(180, 180, 180, 0.055) solid 1px;
+    border-radius: 5px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.card_butt:hover, .card_butt:active {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(99, 99, 99, 0.8);
+    cursor: pointer;
+}
+
+.card_butt.live {
+    font-size: 2.5vw;
+}
+
+.card_butt.dark {
+    background-color: rgb(3, 160, 98, 0.9);
+    color: rgba(255, 255, 255, 0.9);
+    outline: rgba(255, 255, 255, 0.055) solid 1px;
+}
+
+.card_butt:hover, .card_butt.dark:active{
+    background-color: rgb(3, 160, 98, 0.5);
+    color: rgb(255, 255, 255);
+    outline: rgba(255, 255, 255, 0.25) solid 1px;
+}
+
+@media screen and (max-width: 768px) {
+    .featured_card_name {
+        font-size: 6.5vw;
+    }
+
+    .screenshot {
+        width: 95%;
+    }
+
+    .desc {
+        font-size: 3vw;
+    }
+
+    /* .card_butt{
+        width: 25vw;
+        height: 40px;
+        font-size: 5vw;
+    } */
+}
+
+@media screen and (max-width: 425px) {
+    .featured_card_name {
+        font-size: 6.5vw;
+    }
+
+    .screenshot {
+        width: 95%;
+    }
+
+    .desc {
+        font-size: 4vw;
+    }
+
+    .card_butt{
+        width: 25vw;
+        height: 50px;
+        font-size: 5vw;
+    }
+
+    .card_butt.live {
+        font-size: 4vw;
+    }
+}

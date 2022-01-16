@@ -1,4 +1,4 @@
-#icon_list_container {
+/* #icon_list_container {
     display: flex;
     width: 75%;
     height: auto;
@@ -7,4 +7,20 @@
     align-content: center;
     gap: 15px 25px;
     margin: auto;
+} */
+
+#icon_list_container {
+    padding-bottom: 22vh;
+    display: grid;
+    width: 75%;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3vh 2.5vw;
+    margin: auto;
+}
+
+@media screen and (max-width: 425px) {
+    #icon_list_container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }

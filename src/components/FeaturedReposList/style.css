@@ -1,0 +1,19 @@
+#featured_projects {
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20vh;
+}
+
+@media screen and (max-width: 768px) {
+    #featured_projects {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #featured_projects {
+        width: 100%;
+    }
+}
