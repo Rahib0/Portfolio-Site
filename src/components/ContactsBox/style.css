@@ -11,7 +11,7 @@
     text-align: center;
     display: grid;
     grid-template-rows: 8vh 1fr;
-    row-gap: 5vh;
+    row-gap: 5.5vh;
 }
 
 .resume {
@@ -19,7 +19,8 @@
     margin-left: auto;
     margin-right: auto;
     width: 20vw;
-    height: auto;
+    /* height: auto; */
+    height: fit-content;
     font-size: 3vw;
     background-color: rgb(99, 99, 99);
     color: rgba(255, 255, 255, 0.85);
