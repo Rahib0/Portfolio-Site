@@ -13,9 +13,16 @@ const featuredList = [
         liveUrl: "https://globetrotter-app.netlify.app/"
     },
     {
+        name: "Party Parrot Quiz",
+        screenshot: screenshot.ppquiz,
+        desc: "Multiplayer Quiz app made using sockets and data from free external API. Share links to games with unique url",
+        gitUrl: "https://github.com/Rahib0/party-parrot-quiz",
+        liveUrl: "https://party-parrot-quiz.netlify.app/"
+    },
+    {
         name: " Daily Habit Tracker",
         screenshot: screenshot.habit,
-        desc: "Track your habits",
+        desc: "Create Habits and track them daily and view your history/ completion streak",
         gitUrl: "https://github.com/Rahib0/habit-tracking",
         liveUrl: "https://tusmcbhtct-habit-tracker.netlify.app"
     },
