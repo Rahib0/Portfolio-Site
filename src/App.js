@@ -6,6 +6,13 @@ import './App.css'
 
 const featuredList = [
     {
+        name: "GlobeTrotter",
+        screenshot: screenshot.globeTrotter,
+        desc: "Trip adviser/ reccomendation site. Helps plan ideal trip and provide flight information",
+        gitUrl: "https://github.com/PeterAndrewBriscoe/GlobeTrotter",
+        liveUrl: "https://globetrotter-app.netlify.app/"
+    },
+    {
         name: " Daily Habit Tracker",
         screenshot: screenshot.habit,
         desc: "Track your habits",
