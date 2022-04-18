@@ -27,7 +27,7 @@ export default function FeaturedRepoCard({ repoData }) {
             <div>
                 { isExpanded ? 
                 <div>
-                    <p>Placeholder</p>
+                    <p>{repoData.expanded ? repoData.expanded : <span>{repoData.desc}<br></br>More to be added</span>}</p>
                     <button onClick={buttClick}>show less</button>
                 </div>:
                 <div>
