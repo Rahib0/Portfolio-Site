@@ -27,7 +27,24 @@ export default function FeaturedRepoCard({ repoData }) {
             <div>
                 { isExpanded ? 
                 <div>
-                    <p>{repoData.expanded ? repoData.expanded : <span>{repoData.desc}<br></br>More to be added</span>}</p>
+                    <p>{repoData.expanded ? repoData.expanded : 
+                    <>
+                        {repoData.desc}
+                        <span><br></br>More to be added</span>
+                    </>
+                    }</p>
+                    <div>
+                        { ("technologies" in repoData) ?
+                        <>
+                            <p>Technologies</p>
+                            <ul>
+                                {repoData.technologies.map(( tech, n ) => <li key={n}>{tech}</li>)}
+                            </ul>
+                        </>
+                        :
+                        <></>
+                        }
+                    </div>
                     <button onClick={buttClick}>show less</button>
                 </div>:
                 <div>
