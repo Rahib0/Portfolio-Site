@@ -36,6 +36,23 @@
     color: rgb(3, 160, 98); 
 }
 
+.list {
+    list-style-position: inside;
+    text-align: center;
+}
+
+.show_butt {
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.show_butt:hover, .show_butt:active {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(99, 99, 99, 0.8);
+    cursor: pointer;
+}
+
 .card_butt_container {
     display: grid;
     grid-template-columns: 1fr 1fr;

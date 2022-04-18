@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { useTheme } from '../../ThemeContext'
 import './style.css'
 
 export default function FeaturedRepoCard({ repoData }) {
     const darkTheme = useTheme()
     const [ isExpanded, setIsExpanded ] = useState(false)
+    const descStart = useRef()
 
     const openInNewTab = (url) => {
         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
@@ -14,30 +15,31 @@ export default function FeaturedRepoCard({ repoData }) {
     function buttClick(){
         if(isExpanded) {
             setIsExpanded(false)
+            descStart.current.scrollIntoView()
         } else {
             setIsExpanded(true)
         }
     }
 
     return (
-        <div className='featured_card'>
+        <div className='featured_card' ref={descStart}>
             <h3 className={`featured_card_name${darkTheme}`}>{repoData.name}</h3>
             <img src={repoData.screenshot} className='screenshot' alt={repoData.name}></img>
             {/* <p className={`desc${darkTheme}`}>{repoData.desc}</p> */}
             <div>
                 { isExpanded ? 
                 <div>
-                    <p>{repoData.expanded ? repoData.expanded : 
+                    <p className={`desc${darkTheme}`}>{repoData.expanded ? repoData.expanded : 
                     <>
                         {repoData.desc}
-                        <span><br></br>More to be added</span>
+                        <span><br></br><i>More to be added</i></span>
                     </>
                     }</p>
                     <div>
                         { ("technologies" in repoData) ?
                         <>
-                            <p>Technologies</p>
-                            <ul>
+                            <p className={`desc${darkTheme}`}>Technologies</p>
+                            <ul className={`list desc${darkTheme}`}>
                                 {repoData.technologies.map(( tech, n ) => <li key={n}>{tech}</li>)}
                             </ul>
                         </>
@@ -45,13 +47,14 @@ export default function FeaturedRepoCard({ repoData }) {
                         <></>
                         }
                     </div>
-                    <button onClick={buttClick}>show less</button>
                 </div>:
                 <div>
                     <p className={`desc${darkTheme}`}>{repoData.desc}</p> 
-                    <button onClick={buttClick}>show more</button>
                 </div> 
                 }
+                { ("expanded" in repoData) ? 
+                <button onClick={buttClick} className="show_butt">{ isExpanded ? "show less": "show more" }</button>:
+                <></> }
                 
             </div>
             
