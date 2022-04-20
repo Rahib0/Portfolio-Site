@@ -12,7 +12,7 @@ export default function WelcomeCard() {
 
     return (
         <div className={`welcome_card`}>
-            <h1 className={`name`}>Rahib Rahman<span className='blink_me'>.</span></h1>
+            <h1 className={`name`}>Rahib Rahman<span className='blink_me'>|</span></h1>
             <p className={`desc`}>Full stack developer and Economics Graduate</p>
             <p className={`second_line`}><span ref={darkButton} className={`darkmode_butt`} onClick={toggleTheme}>[ Dark Mode ]</span> appreciator</p>
         </div>
